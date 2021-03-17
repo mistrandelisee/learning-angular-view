@@ -1,0 +1,8 @@
+:root {
+  --pkl:rgb(214, 13, 164);
+}
+input,select{
+border-width: 1px ;
+border-color: var(--pk);
+border-style:   solid ;
+}
