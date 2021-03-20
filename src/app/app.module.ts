@@ -7,6 +7,13 @@ import { AddpersonComponent } from './addperson/addperson.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { HomeAngularComponent } from './home-angular/home-angular.component';
+import { ProfileComponent } from './profile/profile.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { DashboardHeaderComponent } from './dashboard-header/dashboard-header.component';
+import { NotificationsListComponent } from './notifications-list/notifications-list.component';
+import { NotificationViewComponent } from './notification-view/notification-view.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { UsersComponent } from './users/users.component';
 
 
 @NgModule({
@@ -15,7 +22,14 @@ import { HomeAngularComponent } from './home-angular/home-angular.component';
     AddpersonComponent,
     HomeComponent,
     LoginComponent,
-    HomeAngularComponent
+    HomeAngularComponent,
+    ProfileComponent,
+    SidebarComponent,
+    DashboardHeaderComponent,
+    NotificationsListComponent,
+    NotificationViewComponent,
+    DashboardComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
