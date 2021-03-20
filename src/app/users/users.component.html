@@ -1,22 +1,42 @@
-<div class="card w-75 shadow mb-4">
-  <!-- Card Header - Dropdown -->
-  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-    <h6 class="m-0 font-weight-bold text-primary">user -name</h6>
-    <div class="dropdown no-arrow">
-      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>...
-      </a>
-      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
-        <div class="dropdown-header">More:</div>
-        <a class="dropdown-item" href="#">view</a>
-        <a class="dropdown-item" href="#">Dismiss</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Something else here</a>
+<a class="float-right float" [routerLink]="['/addperson']" routerLinkActive="router-link-active" role="button" id="plus">
+  <i class="fa fa-plus-circle text-xxl text-prk"></i>
+</a>
+<div class="row">
+
+
+  <div *ngFor="let user of users" class="card col-sm-12 col-xl-3 col-lg-3 col-md-6 p-0 mx-3 shadow mb-4">
+    <!-- Card Header - Dropdown -->
+    <div [ngClass]="{'bg-active': user?.active}" class="card-header  py-3 d-flex flex-row align-items-center justify-content-between">
+      <h6 class="m-0 font-weight-bold text-primary">{{user?.name}}</h6>
+      <div class="dropdown no-arrow">
+        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-ellipsis-v fa-sm fa-fw text-prk"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
+          <div class="dropdown-header">More:</div>
+          <a class="dropdown-item" routerLink="/user/{{user.id}}">view</a>
+          <a class="dropdown-item" href="#">{{user?.active ? 'Dismiss' : 'Activate' }}</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+    </div>
+    <!-- Card Body -->
+    <div class="collapse show" id="collapseCardExample" style="">
+    <div class="card-body">
+      <div class="form-group">
+        <label for="">Prenom:</label>
+        <p class="form-text text-prk">
+          {{user?.prenom || 'user.prenom'}}
+        </p>
+      </div>
+      <div class="form-group">
+        <label for="">Contact:</label>
+        <p class="form-text text-prk">
+          {{user?.Contact || 'user.Contact'}}
+        </p>
       </div>
     </div>
   </div>
-  <!-- Card Body -->
-  <div class="card-body">
-    Dropdown menus can be placed in the card header in order to extend the functionality of a basic card. In this dropdown card example, the Font Awesome vertical ellipsis icon in the card header can be clicked on in order to toggle a dropdown menu.
   </div>
 </div>

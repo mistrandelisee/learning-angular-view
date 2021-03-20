@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   }
   onSubmit() {
     this.submitted = true;
-    alert(JSON.stringify(this.login))
+    // alert(JSON.stringify(this.login))
     this.submit.emit(this.login);
   }
 

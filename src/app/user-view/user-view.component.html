@@ -1,0 +1,36 @@
+<div *ngIf="user" class="card col-sm-12 col-xl-6 col-lg-6 col-md-6 p-0 mx-3 shadow mb-4">
+  <!-- Card Header - Dropdown -->
+  <div [ngClass]="{'bg-active': user?.active }" class="card-header  py-3 d-flex flex-row align-items-center justify-content-between">
+    <h6 class="m-0 font-weight-bold text-primary">{{user?.name ||'user.name'}}</h6>
+    <div class="dropdown no-arrow">
+      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-ellipsis-v fa-sm fa-fw text-prk"></i>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
+        <div class="dropdown-header">More:</div>
+        <a class="dropdown-item" >{{user?.active ? 'Dismiss' : 'Activate' }}</a>
+        <a class="dropdown-item" ><i class="fas fa-edit fa-xl   "></i> Edit</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </div>
+  </div>
+  <!-- Card Body -->
+  <div class="collapse show" id="collapseCardExample" style="">
+  <div class="card-body">
+    <div class="form-group">
+      <label for="">Prenom:</label>
+      <p class="form-text text-prk">
+        {{user?.prenom || 'user.prenom'}}
+      </p>
+    </div>
+    <div class="form-group">
+      <label for="">Contact:</label>
+      <p class="form-text text-prk">
+        {{user?.Contact || 'user.Contact'}}
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+

@@ -14,6 +14,7 @@ import { NotificationsListComponent } from './notifications-list/notifications-l
 import { NotificationViewComponent } from './notification-view/notification-view.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsersComponent } from './users/users.component';
+import { UserViewComponent } from './user-view/user-view.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { UsersComponent } from './users/users.component';
     NotificationsListComponent,
     NotificationViewComponent,
     DashboardComponent,
-    UsersComponent
+    UsersComponent,
+    UserViewComponent
   ],
   imports: [
     BrowserModule,

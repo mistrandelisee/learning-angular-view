@@ -1,3 +1,4 @@
+import { Router, NavigationExtras ,ActivatedRoute, ParamMap } from '@angular/router';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor( private route: Router) { }
   @Input() data:any;
   @Output() logout =new EventEmitter<any>();
   ngOnInit(): void {
@@ -19,6 +20,13 @@ export class HomeComponent implements OnInit {
    */
   public dologout() {
     this.logout.emit(this.data);
+  }
+  /**
+   * navigateto
+   */
+  public navigateto() {
+    alert('toto')
+    this.route.navigate(['user',1]);
   }
 
 }
