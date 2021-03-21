@@ -3,7 +3,7 @@
   <div id="wrapper" >
 
     <!-- Sidebar -->
-    <app-sidebar [userData]="data"></app-sidebar>
+    <app-sidebar [userData]="data" (viewAddPerson)="handleViewAddPerson()" (viewDashboard)="handleViewDashboard()" (viewUsers)="handleViewAdherants()" ></app-sidebar>
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
@@ -64,7 +64,7 @@
               <span class="badge badge-danger badge-counter">3+</span>
             </a>
             <!-- Dropdown - Alerts -->
-            <app-notifications-list></app-notifications-list>
+            <app-notifications-list (selectNotification)="handleSelectNotification($event)"></app-notifications-list>
           </li>
 
             <div class="topbar-divider d-none d-sm-block"></div>
@@ -77,7 +77,7 @@
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" routerLink="/profile" phref="">
+                <a class="dropdown-item" (click)="handleViewProfile()" phref="">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
@@ -100,8 +100,12 @@
           <a name="" id="" class="btn btn-primary" (click)=navigateto() role="button">go to</a>
           <!-- Page Heading -->
           <app-dashboard-header></app-dashboard-header>
-          <!-- <app-dashboard></app-dashboard> -->
-          <router-outlet></router-outlet>
+          <app-dashboard *ngIf="enable.dashboard"></app-dashboard>
+          <app-users *ngIf="enable.users" (addPerson)="handleViewAddPerson()" (selectUser)="handleViewAdherant($event)"></app-users>
+          <app-user-view *ngIf="enable.userView" [user]="userSelected"></app-user-view>
+          <app-addperson *ngIf="enable.addperson"></app-addperson>
+          <app-notification-view *ngIf="enable.notificationView"></app-notification-view>
+          <!-- <router-outlet></router-outlet> -->
 
         </div>
         <!-- /.container-fluid -->

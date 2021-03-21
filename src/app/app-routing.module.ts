@@ -10,15 +10,15 @@ import { UsersComponent } from './users/users.component';
 import { UserViewComponent } from './user-view/user-view.component';
 
 const routes: Routes = [
-   { path: 'home', component: HomeComponent },
-   { path: '',redirectTo:'/dashboard' ,pathMatch: 'full'},
-   { path: 'login', component: LoginComponent },
-   { path: 'users', component: UsersComponent },
-   { path: 'user/:id', component: UserViewComponent },
-   { path: 'dashboard', component: DashboardComponent },
-   { path: 'profile', component: ProfileComponent },
-   { path: 'notification', component: NotificationViewComponent },
-   { path: 'addperson', component: AddpersonComponent }
+  //  { path: 'home', component: HomeComponent },
+  //  { path: '',redirectTo:'/dashboard' ,pathMatch: 'full'},
+  //  { path: 'login', component: LoginComponent },
+  //  { path: 'users', component: UsersComponent },
+  //  { path: 'user/:id', component: UserViewComponent },
+  //  { path: 'dashboard', component: DashboardComponent },
+  //  { path: 'profile', component: ProfileComponent },
+  //  { path: 'notification', component: NotificationViewComponent },
+  //  { path: 'addperson', component: AddpersonComponent }
 ];
 
 @NgModule({

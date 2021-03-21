@@ -1,4 +1,4 @@
-<a class="float-right float" [routerLink]="['/addperson']" routerLinkActive="router-link-active" role="button" id="plus">
+<a class="float-right float" (click)="addperson()"  role="button" id="plus">
   <i class="fa fa-plus-circle text-xxl text-prk"></i>
 </a>
 <div class="row">
@@ -14,7 +14,7 @@
         </a>
         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
           <div class="dropdown-header">More:</div>
-          <a class="dropdown-item" routerLink="/user/{{user.id}}">view</a>
+          <a class="dropdown-item" [id]="user.id" (click)="onSelect($event)">view</a>
           <a class="dropdown-item" href="#">{{user?.active ? 'Dismiss' : 'Activate' }}</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
