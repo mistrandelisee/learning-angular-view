@@ -1,5 +1,34 @@
 <div class="card shadow mb-4">
-  <!-- Card Header - Dropdown -->
+  <div
+    activeIds="panelTwo"
+    closeOthers="true"
+    type="'success'"
+    (panelChange)="beforeChange($event)">
+    <div title="Panel One" id="panelOne">
+        <ng-template ngbPanelContent>
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+            officia
+            aute.
+        </ng-template>
+    </div>
+    <div title="Panel Two" id="panelTwo">
+        <ng-template ngbPanelContent>
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+            officia
+            aute.
+        </ng-template>
+    </div>
+    <div title="Panel Three" id="panelThree">
+        <ng-template ngbPanelContent>
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+            officia
+            aute.
+        </ng-template>
+    </div>
+</div>
+
+<button class="btn btn-sm btn-outline-primary mr-2" (click)="togglePanel('panelOne')">Toggle Panel One</button>
+<button class="btn btn-sm btn-outline-primary mr-2" (click)="togglePanel('panelTwo')">Toggle Panel Two</button>  <!-- Card Header - Dropdown -->
   <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
     <h6 class="m-0 font-weight-bold text-primary">user-name</h6>
     <div class="dropdown no-arrow">

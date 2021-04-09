@@ -14,7 +14,7 @@ const routes: Routes = [
   //  { path: '',redirectTo:'/dashboard' ,pathMatch: 'full'},
   //  { path: 'login', component: LoginComponent },
   //  { path: 'users', component: UsersComponent },
-  //  { path: 'user/:id', component: UserViewComponent },
+   { path: 'user/:id', component: UserViewComponent },
   //  { path: 'dashboard', component: DashboardComponent },
   //  { path: 'profile', component: ProfileComponent },
   //  { path: 'notification', component: NotificationViewComponent },

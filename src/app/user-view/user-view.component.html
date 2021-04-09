@@ -1,7 +1,7 @@
 <div *ngIf="user" class="card col-sm-12 col-xl-6 col-lg-6 col-md-6 p-0 mx-3 shadow mb-4">
   <!-- Card Header - Dropdown -->
   <div [ngClass]="{'bg-active': user?.active }" class="card-header  py-3 d-flex flex-row align-items-center justify-content-between">
-    <h6 class="m-0 font-weight-bold text-primary">{{user?.name ||'user.name'}}</h6>
+    <h6 class="m-0 font-weight-bold text-primary">{{user?.firstName ||user?.username}}</h6>
     <div class="dropdown no-arrow">
       <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i class="fas fa-ellipsis-v fa-sm fa-fw text-prk"></i>
@@ -21,13 +21,13 @@
     <div class="form-group">
       <label for="">Prenom:</label>
       <p class="form-text text-prk">
-        {{user?.prenom || 'user.prenom'}}
+        {{user?.lastName || 'user.prenom'}}
       </p>
     </div>
     <div class="form-group">
       <label for="">Contact:</label>
       <p class="form-text text-prk">
-        {{user?.Contact || 'user.Contact'}}
+        {{user?.phone || 'user.Contact'}}
       </p>
     </div>
   </div>

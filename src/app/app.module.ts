@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule } from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
@@ -15,7 +16,8 @@ import { NotificationViewComponent } from './notification-view/notification-view
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsersComponent } from './users/users.component';
 import { UserViewComponent } from './user-view/user-view.component';
-
+import { SpinnerComponent } from './spinner/spinner.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -31,12 +33,15 @@ import { UserViewComponent } from './user-view/user-view.component';
     NotificationViewComponent,
     DashboardComponent,
     UsersComponent,
-    UserViewComponent
+    UserViewComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    HttpClientModule,
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

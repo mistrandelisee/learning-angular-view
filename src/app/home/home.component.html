@@ -97,8 +97,9 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-          <a name="" id="" class="btn btn-primary" (click)=navigateto() role="button">go to</a>
+          <a name="" id="" class="btn bg-secondary-cus" (click)=navigateto() role="button"> <i class="text-prk fa fa-backward text-white fa-lg " aria-hidden="true"></i> </a>
           <!-- Page Heading -->
+          <router-outlet></router-outlet>
           <app-dashboard-header></app-dashboard-header>
           <app-dashboard *ngIf="enable.dashboard"></app-dashboard>
           <app-users *ngIf="enable.users" (addPerson)="handleViewAddPerson()" (selectUser)="handleViewAdherant($event)"></app-users>

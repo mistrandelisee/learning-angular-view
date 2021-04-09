@@ -10,6 +10,7 @@ import { isEnable } from 'src/models/enabler';
 export class HomeComponent implements OnInit {
  enable:isEnable;
  userSelected;
+ prev:string;
   constructor( private route: Router) { }
   @Input() data:any;
   @Output() logout =new EventEmitter<any>();
@@ -17,6 +18,7 @@ export class HomeComponent implements OnInit {
     console.log(this.data);
     this.enable=new isEnable();
     this.enable.dashboard=true;
+    this.prev='dashboard';
   }
   /**
    * dologout
@@ -28,7 +30,9 @@ export class HomeComponent implements OnInit {
    * navigateto
    */
   public navigateto() {
-    alert('toto')
+    alert('navigate to '+this.prev)
+    this.enable.disableAll();
+    this.enable[this.prev]=true;
     this.route.navigate(['user',1]);
   }
   /**
@@ -45,7 +49,7 @@ export class HomeComponent implements OnInit {
 
     this.userSelected=user;
     console.log(user);
-
+    this.prev='users';
     this.enable.enableUserView();
   }
   public handleViewProfile() {
