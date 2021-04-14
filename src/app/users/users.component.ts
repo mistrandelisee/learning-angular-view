@@ -28,7 +28,7 @@ export class UsersComponent implements OnInit {
 
     }
     ,
-        error => {//error handling
+        error => {
           console.log(error);
           this.isloading=false;
           this.isError=true;
